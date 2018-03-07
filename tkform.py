@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Frame,Button,Tk
 
 class Application(Frame):
     def SayHi(self):
@@ -20,8 +20,10 @@ class Application(Frame):
     def __init__(self,master=None):
         Frame.__init__(self,master)
         self.pack()
-        self.CreateWidgets()        
+        self.CreateWidgets()
 root=Tk()
+root.title("Hello")
+root.geometry('400x400')
 app = Application(master = root)
 app.mainloop()
 root.destroy()
